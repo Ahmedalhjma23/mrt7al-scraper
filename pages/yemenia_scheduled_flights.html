@@ -1,0 +1,701 @@
+<!-- 
+      Hitit Computer Services 2007
+--><html class="" dir="LTR"><head>
+
+
+<script language="Javascript">
+function submitForm() {
+	document.form1.submit();
+}
+</script>
+
+
+<title> :: Advanced Query</title>
+<title> :: Advanced Query</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+<!-- #EndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<link href="Common/css/pax.css?updated=34" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="Common/css/calendar.css">
+ <script language="JavaScript">
+var msg = new Array(79);
+msg["Unsupported Browser"] ='Unsupported Browser' ;
+msg["Exit Seat can not be selected for infants!"] ='Exit Seat can not be selected for infants!' ;
+msg["More Than One Infant in Same Row.. Change Seat!"] ='More Than One Infant in Same Row.. Change Seat!' ;
+msg["More Than Three Children in Same Row..Please Change Seat!"] ='More Than Three Children in Same Row..Please Change Seat!' ;
+msg["You can not select more seats for Same Passenger!..."] ='You can not select more seats for Same Passenger!...' ;
+msg["Phone Number is not valid"]='**Phone Number is not valid!...' ;
+msg["Phone Number is not possible"]='**Phone Number is not possible!...' ;
+msg["No Infants and Children permitted for Exit Seats. Please select another seat!"] ='No Infants and Children permitted for Exit Seats. Please select another seat!' ;
+msg[7] ='Passengers traveling with Infants (0-2 years of age) must NOT be assigned emergency exit seats!' + "\n\n"  
++'Passengers with infants should be allocated a window seat.' 
++'Only one infant per set of seats is allowed!' +"\n\n"  
++'Emergency exit rows should be assigned to able-bodied adult passengers!' +"\n\n"
++'You are at least 18 years old!' +"\n\n"
++'You are not a person with temporary or permanent reduced mobility!' +"\n\n"
++'You are able to open the over wing exit in case of an emergency!' +"\n\n"
++'You are not pregnant!';
+msg["SSR is not permitted for this seat.Please select another seat!"] = '**SSR is not permitted for this seat.Please select another seat!';
+msg["This seat doesnt belong to this Passenger!..."] ='This seat doesnt belong to this Passenger!...' ;
+msg["Select Passenger First"] ='Select Passenger First' ;
+msg["You can not select more seats!..."] ='You can not select more seats!' ;
+msg["You can not select more seats for Same Passenger!..."] ='You can not select more seats for Same Passenger!...' ;
+msg["No Infants and Children permitted for Exit Seats. Please select another seat!"] ='No Infants and Children permitted for Exit Seats. Please select another seat!' ;
+msg["Page loading.Please waiting..."] ='Page loading.Please waiting...' ;
+msg["Date format invalid!"] ='Date format invalid!' ;
+msg["Some mandatory fields are empty...Please check..."] ='Some mandatory fields are empty...Please check...' ;
+msg["Email is invalid. Please check it.."] ='Email is invalid. Please check it..' ;
+msg["Cildren age must be between 2 and 12. Please Re-Enter Date.."] ='Children age must be between 2 and 12. Please Re-Enter Date..' ;
+msg["Infant age must be between 0 and 2. Please Re-Enter Date.."]  = 'Infant age must be between 0 and 2. Please Re-Enter Date..' ;
+msg["The date format should be : dd/mm/yyyy"] ='The date format should be : dd/mm/yyyy' ;
+msg["Please enter a valid month"] ='Please enter a valid month';
+msg["Please enter a valid day"] ='Please enter a valid day' ;
+msg["Please enter a valid 4 digit year between"] ='Please enter a valid 4 digit year between' ;
+msg["and"] ='and' ;
+msg["Please enter a valid date"] ='Please enter a valid date' ;
+msg["Press OK For Voluntary Cancel For Involuntary"] = 'Press OK For Voluntary Cancel For Involuntary';
+msg["Attention! This is not a window seat.Do you want to continue?"] = 'Attention! This is not a window seat.Do you want to continue?';
+msg["Attention! You are about to change seat reservation of a passenger..."] = 'Attention! You are about to change seat reservation of a passenger...';
+msg["Attention! You are about to change seat reservation of a passenger...."] = 'Attention! You are about to change seat reservation of a passenger....';
+msg["Attention! You are about to change auto seat reservation of a passenger..."] = 'Attention! You are about to change auto seat reservation of a passenger';
+msg["amount to multiply is not a number, you can only use: 1234567890 and . (dot)"] ='amount to multiply is not a number, you can only use: 1234567890 and . (dot)' ;
+msg["This field must be number."] = 'This field must be number.';
+msg["This field must be either blank or"] = 'This field must be either blank or';
+msg["characters long."] = 'characters long.';
+msg["This field must be greater than 0"] = 'This field must be greater than 0';
+msg["PLEASE ENTER VALID TICKET NUMBER.."] = 'PLEASE ENTER VALID TICKET NUMBER..';
+msg["PLEASE ENTER VALID COUPON NUMBER.."] = 'PLEASE ENTER VALID COUPON NUMBER..';
+msg["PLEASE ENTER VALID ORDER NO.."] = 'PLEASE ENTER VALID ORDER NO..';
+msg["PLEASE ENTER VALID PNR NUMBER.."] = 'PLEASE ENTER VALID PNR NUMBER..';
+msg["Please Enter a PNR Search Criteria"] = 'Please Enter a PNR Search Criteria';
+msg["You must enter at least 3 character for name and 2 character for surname"] = 'You must enter at least 3 character for name and 2 character for surname'; 
+msg["Interval with Flight No is not supported Search is being made for Single Day"] = 'Interval with Flight No is not supported Search is being made for Single Day';
+msg["Loading"] = 'Loading';
+msg["Departure is After Return Err"] = 'Departure is After Return Error';
+msg["Do you want to print"] = 'Do you want to print';
+msg["Waiting"] = 'Waiting';
+msg["XXX"] = 'Yemen Airways';
+msg["Child"] = 'Child';
+msg["WCHR SSR is not permitted for Exit Seats. Please select another seat!"] = 'WCHR SSR is not permitted for Exit Seats. Please select another seat!'
+msg["Service Fee"] = 'Service Fee';
+msg["Total Inclueded Service Fee"] = 'Total Included Service Fee';
+msg["Select All Connected Flight"] = 'Select All Connected Flight';
+msg["Service Fee Included"] = 'Service Fee Included';
+msg['Loading Page'] = 'Loading Page';
+msg["Some of Pnrs have unpayed seat SSRs"]  = "Some of Pnrs have unpayed seat SSRs";
+msg["Some of Pnrs have unpaid SSRs"]  = "**Some of Pnrs have unpaid SSRs";
+msg["Select All Flights"]  = 'Select All Flights';
+msg["Bundle Service Fee"] = '**Bundle Service Fee';
+msg["Select All Flight For Return"]  = 'Select All Flight For Return';
+msg["Select All Flight For Departure"]  = 'Select All Flight For Departure';
+msg["Select Connected Flight For Departure"]  = 'Select Connected Flight For Departure';
+msg["Select Connected Flight For Return"]  = 'Select Connected Flight For Return';
+msg["Select All Connected Flights"]  = 'Select All Connected Flights';
+msg["Adult age must be between 12 and 100. Please Re-Enter Date.."]  = 'Adult age must be between 12 and 100. Please Re-Enter Date..' ;
+msg["Exit Seat Warning For Exit Seats With Allowance For Infant"] = 'Passengers with infants should be allocated a window seat.' 
++'Only one infant per set of seats is allowed!' +"\n"  
++'Emergency exit rows should be assigned to able-bodied adult passengers!';
+msg["Invalid input"] ='Invalid input' ;
+msg["Phone Error"] ='Invalid phone input';
+msg["You are being redirected to Airberlin site"] = 'You are being redirected to Airberlin site';
+msg["Invalid Name Input"] = 'Invalid Name Input';
+msg["Invalid Surname Input"] = 'Invalid Surname Input';
+msg["Invalid Email Input"] = 'Invalid Email Input';
+msg["Invalid Company Name Input"] = 'Invalid Company Name Input';
+msg["Invalid Message Input"] = 'Invalid Message Input';
+msg["Invalid Tax Input"] = 'Invalid Tax Input';
+msg["Invalid Tax Office Input"] = 'Invalid Tax Office Input';
+msg["Invalid City Input"] = 'Invalid City Input';
+msg["Invalid Address Input"] = 'Invalid Address Input';
+msg["Invalid Explanation Input"] = 'Invalid Explanation Input';
+msg["Seat Already Selected"] = 'Seat Already Selected';
+msg["Suggested SF"] = 'Suggested SF';
+msg["Infant age must be between 0 and 2,in the first travel date in pnr. Please Re-Enter Date.."] = 'Infant age must be between 0 and 2,in the first travel date in pnr. Please Re-Enter Date..';
+msg["Child age must be less than 12,in the first travel date in pnr. Please Re-Enter Date.."] = 'Child age must be less than 12,in the first travel date in pnr. Please Re-Enter Date..';
+msg["Child age must be higher than 2,in the last travel date in pnr. Please Re-Enter Date.."] = 'Child age must be higher than 2,in the last travel date in pnr. Please Re-Enter Date..';
+msg["Different currencies cannot be selected at the same time"] = 'Different currencies cannot be selected at the same time';
+msg["Check-In Fee"] = 'Check-In Fee';
+msg["PlusPoint"]=' Plus Members  ##AMOUNT##  Point';
+msg["check return time"]='check return time';
+msg["Incapaciated pax is not permitted for Exit Seats. Please select another seat!"]='Incapaciated pax is not permitted for Exit Seats. Please select another seat!';
+msg["This seat is not suitable for incapaciated pax. Press ok for continue?"]='This seat is not suitable for incapaciated pax. Press ok for continue?';
+msg["Infant / CBBG of this parent has not selected"]='Infant / CBBG of this parent has not selected';
+msg["Seat is not suitable for infants"] = 'Seat is not suitable for passengers with infants';
+msg['DCS Transit baggage weight can not be zero for this number of baggage'] = 'DCS Transit baggage weight can not be zero for this number of baggage';
+msg['DCS Some transit bag mandatory fields are empty...Please check...'] = 'DCS Some transit bag mandatory fields are empty...Please check...';
+msg["The class(es) will be overbooked in case of no availability. Do you confirm?"] = "The class(es) will be overbooked in case of no availability. Do you confirm?";
+msg["January"]='January' ;
+msg["February"]='February' ;
+msg["March"]='March' ;
+msg["April"]='April' ;
+msg["May"]='May' ;
+msg["June"]='June' ;
+msg["July"]='July' ;
+msg["August"]='August' ;
+msg["September"]='September' ;
+msg["October"]='October' ;
+msg["November"]='November' ;
+msg["December"]='December' ;
+msg["Sun"]='Sun' ;
+msg["Mon"]='Mon' ;
+msg["Tue"]='Tue' ;
+msg["Wed"]='Wed' ;
+msg["Thu"]='Thu' ;
+msg["Fri"]='Fri' ;
+msg["Sat"]='Sat' ;
+msg["Total CETAX"]='Total Carbon Emission Tax' ;
+msg["Total YRTAX"]='Total YRTAX' ;
+msg['First Name'] = 'First Name';
+msg['Last Name'] = 'Last Name';
+msg['Ticket Rule'] = 'Ticket Rules';
+msg['taxTypeTW'] = 'tax TWAE-Airport Service Charge ';
+msg['taxTypeOO'] = 'tax SGOO-Passenger Security Service Charge';
+msg['taxTypeSG'] = 'taxTypeSG';
+msg['taxTypeOP'] = 'tax SGOP-Aviation Levy';
+msg['taxTypeSW'] = 'tax JPSW-Passenger Facility Service Charge';
+msg['taxTypeYQ'] = 'tax YQ-Fuel Service Fee/Insurance & Security Surcharge ';
+msg['taxTypeCN'] = 'tax CNAE-Airport Fee';
+msg['taxTypeOI'] = 'tax JPOI-Passenger Security Service Charge';
+msg['taxTypeTS'] = 'tax THTS-International Passenger Service Charge';
+msg['taxTypeBP'] = 'tax KRBP-International PSC, Departure Tax, and Contribution to International Poverty Eradication';
+msg['taxTypeMO'] = 'tax MOAE-Airport Security Tax';
+msg['taxTypeWN'] = 'tax MOWN-Passenger Service Charge';
+msg['Ticket Based Taxes'] = 'Ticket Based Taxes';
+msg['PLEASE ENTER VALID DOCUMENT NUMBER..'] = 'PLEASE ENTER VALID DOCUMENT NUMBER..';
+msg['PLEASE ENTER VALID FF NUMBER..'] = 'PLEASE ENTER VALID PASSENGER FF NUMBER..';
+msg['PLEASE ENTER A VALID DATE..'] = 'PLEASE ENTER A VALID DATE';
+msg['Availability_Bundle_SSR_Selection_Error'] = 'Availability_Bundle_SSR_Selection_Error';
+msg['CHANGE_AUTO_SELECTED_BUNDLE_WARNING'] = 'Change the auto-selected bundle !';
+msg['SELECT_BUNDLE_BASIC'] = 'Light';
+msg['SELECT_BUNDLE_SMART'] = 'Easy';
+msg['SELECT_BUNDLE_PREMIUM'] = 'FLEX';
+msg['SELECT_BUNDLE_PLATINUM'] = 'SELECT_BUNDLE_PLATINUM';
+msg['You have to select all flights in same connection'] = 'You have to select all flights in same connection';
+msg["You must enter at least 3 character for name for like search"] = 'You must enter at least 3 character for name for like search'; 
+msg["You must enter at least 3 character for surname for like search"] = 'You must enter at least 3 character for surname for like search'; 
+msg["No Port Matrix Definition Found"] = 'No Port Matrix Definition Found';
+msg["Infant of this parent has not selected"] = 'Infant of this parent has not selected';
+msg["Invalid input, just enter chars : ##TEXT##"] ='**Invalid input, just enter chars : ##TEXT##' ;
+msg["More Than One Infant in Same Row/Group.. Change Seat!"] = '**More Than One Infant in Same Row/Group.. Change Seat!' ;
+msg["ERROR WHILE BLOCK SEATS"] = '**ERROR WHILE BLOCK SEATS';
+msg["ERROR WHILE RELEASE SEATS"] = '**ERROR WHILE RELEASE SEATS';
+msg["The Flight is not in FF status, ERP data cannot be sent!"] = '**The Flight is not in FF status, ERP data cannot be sent!';
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<script language="Javascript">var isProd=true;</script>
+<script language="Javascript" src="Common/include/PAX.js?updated=23"></script>
+<script language="javascript" src="Common/include/popcalendar_EN.js"></script></head><body class="rezv-body scheduled-flight-list" style="background:background-color=#FFFFFF"><div onclick="bShow=true" id="calendar" style="z-index:+999;position:absolute;visibility:hidden;"><table width="250" style="font-family:arial;font-size:11px;border-width:1;border-style:solid;border-color:#a0a0a0;font-family:arial; font-size:11px}" bgcolor="#ffffff"><tbody><tr bgcolor="#0000aa"><td><table width="248"><tbody><tr><td style="padding:2px;font-family:arial; font-size:11px;"><font color="#ffffff"><b><span id="caption"><span id="spanLeft" style="border-style:solid;border-width:1;border-color:#3366FF;cursor:pointer" this.style.bordercolor="#88AAFF" ;window.status="Click to see previous Months." '="" onclick="javascript:decMonth()" onmouseout="clearInterval(intervalID1);this.style.borderColor=&quot;#3366FF&quot;;window.status=&quot;&quot;" onmousedown="clearTimeout(timeoutID1);timeoutID1=setTimeout(&quot;StartDecMonth()&quot;,500)" onmouseup="clearTimeout(timeoutID1);clearInterval(intervalID1)">&nbsp;<img id="changeLeft" src="images/left1.gif" width="10" height="11" border="0">&nbsp;</span>&nbsp;<span id="spanRight" style="border-style:solid;border-width:1;border-color:#3366FF;cursor:pointer" this.style.bordercolor="#88AAFF" ;window.status="Click to see next Months." '="" onmouseout="clearInterval(intervalID1);this.style.borderColor=&quot;#3366FF&quot;;window.status=&quot;&quot;" onclick="incMonth()" onmousedown="clearTimeout(timeoutID1);timeoutID1=setTimeout(&quot;StartIncMonth()&quot;,500)" onmouseup="clearTimeout(timeoutID1);clearInterval(intervalID1)">&nbsp;<img id="changeRight" src="images/right1.gif" width="10" height="11" border="0">&nbsp;</span>&nbsp;<span id="spanMonth" style="border-style:solid;border-width:1;border-color:#3366FF;cursor:pointer" this.style.bordercolor="#88AAFF" ;window.status="Click to select Month." '="" onclick="popUpMonth()"></span>&nbsp;<span id="spanYear" style="border-style:solid;border-width:1;border-color:#3366FF;cursor:pointer" this.style.bordercolor="#88AAFF" ;window.status="Click to select Year." '="" onclick="popUpYear()"></span>&nbsp;</span></b></font></td><td align="right"><a href="javascript:hideCalendar()"><img id="close_gif" src="images/close.gif" width="15" height="13" border="0" alt="Close the Calendar"></a></td></tr></tbody></table></td></tr><tr><td style="padding:5px" bgcolor="#ffffff"><span id="content"></span></td></tr><tr bgcolor="#f0f0f0"><td style="padding:5px" align="center"><span id="lblToday">Today <a onmousemove="window.status=&quot;Go to Current Month&quot;" onmouseout="window.status=&quot;&quot;" title="Go to Current Month" style="text-decoration:none;color:black;" href="javascript:monthSelected=monthNow;yearSelected=yearNow;constructCalendar();">Sun, 5 Jan	2025</a></span></td></tr></tbody></table></div><div id="selectMonth" style="z-index:+999;position:absolute;visibility:hidden;"></div><div id="selectYear" style="z-index:+999;position:absolute;visibility:hidden;"></div>
+<script type="text/javascript" src="Common/javascripts/hcsvalidation.js"></script>
+<script type="text/javascript" src="Common/javascripts/jquery.js"></script>
+<script type="text/javascript" src="Common/beacon.js" async=""></script>
+<meta name="globalsign-domain-verification" content="IV-yKcYZxS4Di7fkELL8ekr_vCKttgCCpj2Zactt0k">
+
+ 
+
+
+
+
+
+
+<div id="content"></div>
+<div id="loading" class="loading-invisible">
+    <p><!--<img src="Common/images/wait.gif" />--></p>
+</div>
+
+
+<script>
+    initLoader();
+
+</script>
+
+<script type="text/javascript">
+    var serverdate=new Date();
+
+    function padlength(what){
+        var output=(what.toString().length==1)? "0"+what : what;
+        return output;
+    }
+
+
+
+    document.onreadystatechange = function () {
+        //Ana basliklar altinda hic altmenu yok ise tumden kapatmak lazim...
+        if($(".stdBtnNew").length > 0) {
+            if($(".stdBtnNew").find("a#reservation")[0].nextElementSibling.children.length==0){
+                $( "#reservation" ).parent().parent().hide();
+            }
+
+            if($(".stdBtnNew").find("a#reports")[0].nextElementSibling.children.length==0){
+                $( "#reports" ).parent().parent().hide();
+            }
+
+
+            if($(".stdBtnNew").find("a#dcs")[0].nextElementSibling.children.length==0){
+                $( "#dcs" ).parent().parent().hide();
+            }
+
+            if($(".stdBtnNew").find("a#gds")[0].nextElementSibling.children.length==0){
+                $( "#gds" ).parent().parent().hide();
+            }
+
+            if($(".stdBtnNew").find("a#others")[0].nextElementSibling.children.length==0){
+                $( "#others" ).parent().parent().hide();
+            }
+        }
+        var link = location.pathname;
+        link = ".stdBtnNew [href^='" + link.substring(link.lastIndexOf("/")+1,link.lastIndexOf(".jsp")) + "']";
+        $(link).parent().css('background-color', 'darkkhaki').addClass("selected__page");
+        if(!$(".selected__page").parent().hasClass("show")){
+            $(".selected__page").parent().addClass("show");
+        }
+        $(".selected__page").parent().show();
+
+    }
+
+</script>
+<div id="hitit_top_panel" class="hitit-top-panel">
+    <header class="main-header">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters justify-content-between align-items-center hitit-panel-row">
+                <div class="col-6 d-flex align-items-center hitit-panel-col">
+                    <a class="text-decoration-none ml-5 hitit-panel-logo-area" href="#">
+                        <img class="img-fluid main-sidebar__logo" src="images/airline_logo.png" alt="">
+                    </a>
+                    
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-center pr-5 hitit-panel-col">
+                    
+
+                    <div class="dropdown__type-1 ml-2 d-none d-md-block shortcut-container">
+                        <div class="dropdown dropdown__with-overlay">
+                            <button class="btn btn-secondary dropdown-toggle shortcut-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                **Shortcut Menu <span class="shortcut-icon"></span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right shortcut-dropdown" style="display:none;" aria-labelledby="dropdownMenuButton">
+                                
+                                                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                            <div class="header-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown__type-1 ml-2 d-none d-md-block language-container">
+                        <div class="dropdown dropdown__with-overlay">
+                            <button class="btn btn-secondary dropdown-toggle language-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                **Change Language <span class="language-icon"></span>
+                            </button>
+
+                            <div class="dropdown-menu dropdown-menu-right language-dropdown" style="display: none;" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-icon"></div>
+                                <select id="languageSelection" class="languageSelection" style="width: 100px" onchange="javascript: changeLanguage();">
+                                    
+                                    
+                                    
+                                    <!-- Buradaki dil degistirme param ekleme sadece RESA ELECTRON 3.8A icin gecerlidir. Sonraki paketlerde electron tarafinda cozulmustur. 3.8B de vs burasi kaldirilmali -->
+                                    <option class="dropdown-item" value="ScheduledFlightList.jsp?activeLanguage=EN" selected="selected">
+                                    English
+                                    
+                                    </option>
+                                    
+                                    
+                                </select>
+                            </div>
+                            <div class="header-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+</div>
+
+
+    
+    
+    
+<script>
+
+    $( ".shortcut-btn" ).on( "click", function() {
+        $(this).toggleClass("true");
+        $(".shortcut-dropdown").toggleClass( "show" );
+        $(".shortcut-container .header-overlay").toggleClass("true");
+        $("body").toggleClass( "hidden" );
+        
+    });
+    $( ".user-panel-btn" ).on( "click", function() {
+        $(".user-panel-dropdown").toggleClass( "show" );
+        $(".header-user-panel-row .header-overlay").toggleClass("true");
+        $("body").toggleClass( "hidden" );
+    });
+    $( ".language-btn" ).on( "click", function() {
+        $(this).toggleClass("true");
+        $(".language-dropdown").toggleClass( "show" );
+        $(".language-container .header-overlay").toggleClass("true");
+        $("body").toggleClass( "hidden" );
+    });
+    $( ".header-overlay" ).on( "click", function() {
+        $(".language-dropdown").removeClass( "show" );
+        $(".user-panel-dropdown").removeClass( "show" );
+        $(".shortcut-dropdown").removeClass( "show" );
+        $(this).removeClass("true");
+    });
+    $( "#reservationCollapseButton" ).on( "click", function() {
+        $("#reservationCollapseDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( "#reportsCollapseButton" ).on( "click", function() {
+        $("#reportsCollapseDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( "#dcsCollapseButton" ).on( "click", function() {
+        $("#dcsCollapseDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( "#gdsCollapseButton" ).on( "click", function() {
+        $("#gdsCollapseDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( "#othersCollapseButton" ).on( "click", function() {
+        $("#othersCollapseDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( "#thirdPartyLinksButton" ).on( "click", function() {
+        $("#thirdPartyLinksCollapseDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( "#3rdPartyLinksButton" ).on( "click", function() {
+        $("#3rdPartyLinksDiv").toggleClass( "show" );
+        $(this).toggleClass("active-btn");
+    });
+    $( ".stdBtnNew.accordion" ).on( "click", function() {
+        $("left-menu-elements").toggle.css("display","block");
+    });
+    $( ".navigation-toggle" ).on( "click", function() {
+        $(".app-main-sidebar").toggleClass( "open" );
+        $(".app-main-sidebar").removeClass("sidebar-open");
+        $("#thirdPartyLinksCollapseDiv").removeClass("show");
+        $("#othersCollapseDiv").removeClass("show");
+        $("#reservationCollapseDiv").removeClass("show");
+        $("#reportsCollapseDiv").removeClass("show");
+        $("#dcsCollapseDiv").removeClass("show");
+        $("#gdsCollapseDiv").removeClass("show");
+        $("#3rdPartyLinksCollapseDiv").removeClass("show");
+        $("form").toggleClass("form-container");
+        $("form").removeClass("form-open");
+    });
+
+    $( ".top-icons" ).on( "click", function() {
+        $(".app-main-sidebar").addClass( "sidebar-open" );
+        $("form").addClass("form-open");
+    });
+    $(".navigation-search ").attr("id", "left-menu-input");
+    $(".navigation-search ").attr("onkeyup", "leftMenuFilter()");
+    $(".main-navigation").attr("id", "left-menu-main-navigation");
+    
+
+</script>
+
+<script>
+function leftMenuFilter() {
+    var input, filter, ul, li, a, i, txtValue, subUl, subLi, j, subTxtValue;
+    input = document.getElementById("left-menu-input");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("left-menu-main-navigation");
+    li = ul.querySelectorAll("li");
+    
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = ""; 
+            var parentDiv = li[i].closest('div');
+            if (parentDiv) {
+                parentDiv.classList.add('show');
+            }
+        } else {
+            li[i].style.display = "none"; 
+        }
+
+        
+        subUl = li[i].getElementsByTagName("ul");
+        for (j = 0; j < subUl.length; j++) {
+            subLi = subUl[j].getElementsByTagName("li");
+            for (k = 0; k < subLi.length; k++) {
+                subTxtValue = subLi[k].textContent || subLi[k].innerText;
+                if (subTxtValue.toUpperCase().indexOf(filter) > -1) {
+                    subLi[k].style.display = ""; 
+                    li[i].style.display = ""; 
+                    var parentDiv = li[i].closest('div');
+                    if (parentDiv) {
+                        parentDiv.classList.add('show');
+                    }
+                } else {
+                    subLi[k].style.display = "none"; 
+                }
+            }
+        }
+    }
+}
+
+
+    </script>
+
+
+
+
+
+                 
+      <form name="form1" method="post" action="ScheduledFlightList.jsp">
+        <script language="JavaScript">
+</script>
+
+ 
+<table width="100%" 0="" border="0" align="center" cellpadding="1" cellspacing="1" white="">
+ <tbody><tr><td>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody><tr valign="middle"> 
+                        <td #ffffff="" class="title_text" align="left" colspan="6">Scheduled Flight Search</td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                      </tr></tbody></table><table>
+                        <tbody><tr>
+                        	<td width="149" align="right" valign="middle" class="tbox_text">From&nbsp;:</td>
+                        	<td width="125" align="left" valign="middle" class="tbox_text"><select name="CITY_PORT" id="CITY_PORT" size="1" visible="true" class="InputText"><option value="ADD" selected="">Addisababa</option><option value="ADE">Aden</option><option value="AAY">Al Ghaydah</option><option value="AMM">Amman-Queen Ali</option><option value="BOM">Bombay</option><option value="CAI">Cairo</option><option value="JIB">Djibouti</option><option value="DOH">Doha</option><option value="DXB">Dubai</option><option value="JED">Jeddah</option><option value="KRT">Khartoum</option><option value="KWI">Kuwait</option><option value="RUH">Riyadh</option><option value="RIY">Riyan Mukalla</option><option value="SAH">Sanaa</option><option value="GXF">Seiyun</option><option value="SCT">Socotra</option></select></td>
+                        	<td width="66" rowspan="2" align="right" valign="middle" class="tbox_text">Date&nbsp;:</td>
+                        	<td width="132" rowspan="2" align="left" valign="middle" class="tbox_text date-td"><input class="InputText" type="text" name="DBSTARTDATE" id="DBSTARTDATE" size="15" maxlength="10" autocomplete="OFF" format="dd/mm/yyyy" onkeyup="uk(this);" onkeypress="return isNumericCheck(event);" onchange="checkFormat(this);" value="05/01/2025"><img src="images/calendar-icon.gif" name="DBSTARTDATEIMG" id="DBSTARTDATEIMG" align="absmiddle" hspace="3" onclick="popUpCalendar(this, 'DBSTARTDATE', 'dd/mm/yyyy','null','images/','','')" style="cursor:pointer"></td>
+                        	<td width="116" rowspan="2" align="center" valign="middle" class="tbox_text">
+<!-- begin of submitButton -->
+<table width="100%" border="0">
+<tbody><tr>
+<td class="tbox_text" width="100%" align="center" valign="top">
+  <div align="center" onclick="javascript: if (disableButtonContent(this,false)) { onclick:submitForm();  } " style="cursor:pointer" "="" class="stdbtnnrmWithFrame">
+   <img border="0" src="images/btnSearch.gif" name="btnSearch"><div class="stdbtnWithText">Search</div>
+  </div>
+</td>
+</tr>
+</tbody></table>
+<!-- end of submitButton --></td>
+                        </tr>
+                        <tr>
+                        	<td width="149" align="right" valign="middle" class="tbox_text">To&nbsp;: </td>
+                        	<td width="125" align="left" valign="middle" class="tbox_text"><select name="CITY_PORT_ARR" id="CITY_PORT_ARR" size="1" visible="true" class="InputText"><option value="ADD" selected="">Addisababa</option><option value="ADE">Aden</option><option value="AAY">Al Ghaydah</option><option value="AMM">Amman-Queen Ali</option><option value="BOM">Bombay</option><option value="CAI">Cairo</option><option value="JIB">Djibouti</option><option value="DOH">Doha</option><option value="DXB">Dubai</option><option value="JED">Jeddah</option><option value="KRT">Khartoum</option><option value="KWI">Kuwait</option><option value="RUH">Riyadh</option><option value="RIY">Riyan Mukalla</option><option value="SAH">Sanaa</option><option value="GXF">Seiyun</option><option value="SCT">Socotra</option></select>
+                        </td></tr>
+  					  </tbody></table>
+                      </td></tr>
+                      
+                      <tr>
+                        <!--<select name="QUERYTYPE" size="1" class="InputText"><option value="" selected></option><option value="A" >Varï¿½ï¿½</option><option value="D" >Kalkï¿½ï¿½</option></select>
+                        -->
+                      </tr>
+                      
+                     
+                   
+                      <tr>
+                        <td colspan="4">&nbsp;</td>
+                      </tr>
+                        
+                    
+                    
+                    <tr>
+                      <td align="center" colspan="6"> 
+                      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tbody><tr><td align="center"><div id="outer"><div id="wrapper" style="width:100%;">
+<div id="header">
+Departure Flight Schedule SIN-TPE</div>
+<div id="main" class="dataTable">
+<table class="dcs-firefox-border-fix" cellpadding="0" cellspacing="0" border="1" bordercolor="white" style="width:100%;">
+<tbody><tr class="title_text dcs-common-table-header">
+<td style="width:10%">Date</td>
+<td style="width:12%">Days</td>
+<td style="width:10%">Flight</td>
+<td style="width:10%">Dep-Arr Port</td>
+<td style="width:20%">Type</td>
+<td style="width:5%">Sch. Dep.Time</td>
+<td style="width:5%">Sch. Arr.Time</td>
+<td style="width:3%">CT</td>
+<td style="width:5%">STOP</td>
+<td style="width:20%">LEG INFO</td>
+</tr>
+<tr>
+</tr>
+<tr class="oddrow ">
+<td valign="top" style="">No flight found. Please Search with different criteria..</td>
+</tr>
+</tbody></table>
+</div>
+<div id="footer"> </div>
+</div>
+</div>
+</td></tr></tbody></table></td></tr>
+                 
+                    
+                    <tr>
+                      <td align="center" colspan="6"> 
+                      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody><tr><td align="center"><div id="outer"><div id="wrapper" style="width:100%;">
+<div id="header">
+Departure Flight Schedule TPE-SIN</div>
+<div id="main" class="dataTable">
+<table class="dcs-firefox-border-fix" cellpadding="0" cellspacing="0" border="1" bordercolor="white" style="width:100%;">
+<tbody><tr class="title_text dcs-common-table-header">
+<td style="width:10%">Date</td>
+<td style="width:12%">Days</td>
+<td style="width:10%">Flight</td>
+<td style="width:10%">Dep-Arr Port</td>
+<td style="width:20%">Type</td>
+<td style="width:5%">Sch. Dep.Time</td>
+<td style="width:5%">Sch. Arr.Time</td>
+<td style="width:3%">CT</td>
+<td style="width:5%">STOP</td>
+<td style="width:20%">LEG INFO</td>
+</tr>
+<tr>
+</tr>
+<tr class="oddrow ">
+<td valign="top" style="">No flight found. Please Search with different criteria..</td>
+</tr>
+</tbody></table>
+</div>
+<div id="footer"> </div>
+</div>
+</div>
+</td></tr></tbody></table></td></tr>
+                   
+                    
+                     
+                    
+		           </tbody></table>
+	 
+	 	
+   
+  
+   <br><table width="100%"><tbody><tr><td>
+     <span class="style2 style1 style3 style4 style5"><strong></strong></span></td>
+	  </tr>
+   </tbody></table>  
+      </form>
+<!-- #EndEditable -->
+                      
+                 
+            
+        
+    
+    
+    
+    
+    
+    
+      
+        <table id="hitit_bottom_panel" width="890" border="0" cellpadding="0" cellspacing="0">
+   <!--         <tr>
+                <td height="36" colspan="3" class="UstBaslikKirmizi">&nbsp;
+                  
+                    <marquee scrollamount="5" width="100%" height="36" scrolldelay="10" >  </marquee>
+                 </td> 
+            </tr>-->
+            
+            <tbody><tr>
+			<td height="37" bgcolor="#00266d" align="center">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  
+ 
+  <tbody><tr> 
+    <td color="#FFFFFF;" height="37" valign="middle" align="right" class="KullaniciBilgi footerBG">
+          <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href="https://www.yemenia.com/" target="_blank"> 
+          Home</a>&nbsp;
+
+
+
+
+		
+
+
+
+
+		
+			  <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href=" javascript:; onClick=openW('https://www.yemenia.com/about/terms_and_conditions','');">
+			  Terms &amp; Conditions</a>&nbsp; 
+		            
+
+		  
+			  <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href=" javascript:; onClick=openW('https://www.yemenia.com/','');">
+			  Info</a>
+		            
+
+		  
+			  <br><a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href=" javascript:; onClick=openW('https://www.yemenia.com/about/privacy','');">
+			  Privacy Policy</a>&nbsp;
+		            
+
+		        
+	          <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href=" javascript:; onClick=openW('https://www.yemenia.com/contact_us','');">Contacts</a> 
+		  
+		  
+		  
+              <a href="javascript:;" onclick="openW('RulesAndProcedure.jsp','');"><span class="KullaniciBilgiBold fare-display">**Rules &amp; Procedures</span></a>
+          
+                 
+	</td>
+   			
+  
+  </tr><tr> 
+    <td color="#FFFFFF;" height="37" valign="middle" align="right" class="KullaniciBilgi footerBG">
+    
+  
+			  
+              <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none ">
+			  All Rights Reserved</a> 
+		    
+		  	</td>
+   
+  </tr>
+  
+</tbody></table>
+
+</td>
+            </tr>
+         </tbody></table>
+    
+    
+      
+
+
+
+<link href="Common/css/uniform.default.css" media="all" rel="Stylesheet" type="text/css">
+<link href="Common/css/jquery-ui-1.9.2.custom.css?updated=1" media="all" rel="Stylesheet" type="text/css">
+<script type="text/javascript" src="Common/javascripts/jquery-ui-1.13.2-custom1.min.js"></script>
+<script type="text/javascript" src="Common/javascripts/jquery.uniform.js"></script>
+<script type="text/javascript" src="Common/javascripts/slides.min.jquery.js"></script>
+<script type="text/javascript" src="Common/javascripts/jquery.blockUI.js"></script>
+                    
+<script type="text/javascript">
+$(document).ready(function(){
+	var topPanelWidth =$("#hitit_main_content").css('width');
+	document.getElementById("hitit_top_panel").style.width = topPanelWidth;
+	document.getElementById("hitit_bottom_panel").style.width = topPanelWidth;
+})
+</script>
+
+
+</body></html>

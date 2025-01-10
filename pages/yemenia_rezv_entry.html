@@ -1,0 +1,623 @@
+<!-- 
+      Hitit Computer Services 2007
+--><html lang="en" xmlns:ui="http://java.sun.com/jsf/facelets"><!-- #BeginTemplate "/Templates/GenericTemplate.dwt" --><head>
+    
+
+    <!-- #BeginEditable "Receiver" -->
+    <!-- #BeginEditable "Receiver" -->
+    
+
+
+<script type="text/javascript" src="Common/include/peripheral/peripheral-electron-renderer-v3.8.js"></script>
+	
+	
+	
+        
+        
+
+
+    <!-- #EndEditable -->
+    <!-- #BeginEditable "doctitle" -->
+    <title> :: Login</title>
+    <!-- #EndEditable -->
+
+    <title> :: Login</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+<!-- #EndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<link href="Common/css/pax.css?updated=38" rel="stylesheet" type="text/css">
+ <script language="JavaScript">
+var msg = new Array(79);
+msg["Unsupported Browser"] ='Unsupported Browser' ;
+msg["Exit Seat can not be selected for infants!"] ='Exit Seat can not be selected for infants!' ;
+msg["More Than One Infant in Same Row.. Change Seat!"] ='More Than One Infant in Same Row.. Change Seat!' ;
+msg["More Than Three Children in Same Row..Please Change Seat!"] ='More Than Three Children in Same Row..Please Change Seat!' ;
+msg["You can not select more seats for Same Passenger!..."] ='You can not select more seats for Same Passenger!...' ;
+msg["Phone Number is not valid"]='**Phone Number is not valid!...' ;
+msg["Phone Number is not possible"]='**Phone Number is not possible!...' ;
+msg["No Infants and Children permitted for Exit Seats. Please select another seat!"] ='No Infants and Children permitted for Exit Seats. Please select another seat!' ;
+msg[7] ='Passengers traveling with Infants (0-2 years of age) must NOT be assigned emergency exit seats!' + "\n\n"  
++'Passengers with infants should be allocated a window seat.' 
++'Only one infant per set of seats is allowed!' +"\n\n"  
++'Emergency exit rows should be assigned to able-bodied adult passengers!' +"\n\n"
++'You are at least 18 years old!' +"\n\n"
++'You are not a person with temporary or permanent reduced mobility!' +"\n\n"
++'You are able to open the over wing exit in case of an emergency!' +"\n\n"
++'You are not pregnant!';
+msg["SSR is not permitted for this seat.Please select another seat!"] = '**SSR is not permitted for this seat.Please select another seat!';
+msg["This seat doesnt belong to this Passenger!..."] ='This seat doesnt belong to this Passenger!...' ;
+msg["Select Passenger First"] ='Select Passenger First' ;
+msg["You can not select more seats!..."] ='You can not select more seats!' ;
+msg["You can not select more seats for Same Passenger!..."] ='You can not select more seats for Same Passenger!...' ;
+msg["No Infants and Children permitted for Exit Seats. Please select another seat!"] ='No Infants and Children permitted for Exit Seats. Please select another seat!' ;
+msg["Page loading.Please waiting..."] ='Page loading.Please waiting...' ;
+msg["Date format invalid!"] ='Date format invalid!' ;
+msg["Some mandatory fields are empty...Please check..."] ='Some mandatory fields are empty...Please check...' ;
+msg["Email is invalid. Please check it.."] ='Email is invalid. Please check it..' ;
+msg["Cildren age must be between 2 and 12. Please Re-Enter Date.."] ='Children age must be between 2 and 12. Please Re-Enter Date..' ;
+msg["Infant age must be between 0 and 2. Please Re-Enter Date.."]  = 'Infant age must be between 0 and 2. Please Re-Enter Date..' ;
+msg["The date format should be : dd/mm/yyyy"] ='The date format should be : dd/mm/yyyy' ;
+msg["Please enter a valid month"] ='Please enter a valid month';
+msg["Please enter a valid day"] ='Please enter a valid day' ;
+msg["Please enter a valid 4 digit year between"] ='Please enter a valid 4 digit year between' ;
+msg["and"] ='and' ;
+msg["Please enter a valid date"] ='Please enter a valid date' ;
+msg["Press OK For Voluntary Cancel For Involuntary"] = 'Press OK For Voluntary Cancel For Involuntary';
+msg["Attention! This is not a window seat.Do you want to continue?"] = 'Attention! This is not a window seat.Do you want to continue?';
+msg["Attention! You are about to change seat reservation of a passenger..."] = 'Attention! You are about to change seat reservation of a passenger...';
+msg["Attention! You are about to change seat reservation of a passenger...."] = 'Attention! You are about to change seat reservation of a passenger....';
+msg["Attention! You are about to change auto seat reservation of a passenger..."] = 'Attention! You are about to change auto seat reservation of a passenger';
+msg["amount to multiply is not a number, you can only use: 1234567890 and . (dot)"] ='amount to multiply is not a number, you can only use: 1234567890 and . (dot)' ;
+msg["This field must be number."] = 'This field must be number.';
+msg["This field must be either blank or"] = 'This field must be either blank or';
+msg["characters long."] = 'characters long.';
+msg["This field must be greater than 0"] = 'This field must be greater than 0';
+msg["PLEASE ENTER VALID TICKET NUMBER.."] = 'PLEASE ENTER VALID TICKET NUMBER..';
+msg["PLEASE ENTER VALID COUPON NUMBER.."] = 'PLEASE ENTER VALID COUPON NUMBER..';
+msg["PLEASE ENTER VALID ORDER NO.."] = 'PLEASE ENTER VALID ORDER NO..';
+msg["PLEASE ENTER VALID PNR NUMBER.."] = 'PLEASE ENTER VALID PNR NUMBER..';
+msg["Please Enter a PNR Search Criteria"] = 'Please Enter a PNR Search Criteria';
+msg["You must enter at least 3 character for name and 2 character for surname"] = 'You must enter at least 3 character for name and 2 character for surname'; 
+msg["Interval with Flight No is not supported Search is being made for Single Day"] = 'Interval with Flight No is not supported Search is being made for Single Day';
+msg["Loading"] = 'Loading';
+msg["Departure is After Return Err"] = 'Departure is After Return Error';
+msg["Do you want to print"] = 'Do you want to print';
+msg["Waiting"] = 'Waiting';
+msg["XXX"] = 'Yemen Airways';
+msg["Child"] = 'Child';
+msg["WCHR SSR is not permitted for Exit Seats. Please select another seat!"] = 'WCHR SSR is not permitted for Exit Seats. Please select another seat!'
+msg["Service Fee"] = 'Service Fee';
+msg["Total Inclueded Service Fee"] = 'Total Included Service Fee';
+msg["Select All Connected Flight"] = 'Select All Connected Flight';
+msg["Service Fee Included"] = 'Service Fee Included';
+msg['Loading Page'] = 'Loading Page';
+msg["Some of Pnrs have unpayed seat SSRs"]  = "Some of Pnrs have unpayed seat SSRs";
+msg["Some of Pnrs have unpaid SSRs"]  = "**Some of Pnrs have unpaid SSRs";
+msg["Select All Flights"]  = 'Select All Flights';
+msg["Bundle Service Fee"] = '**Bundle Service Fee';
+msg["Select All Flight For Return"]  = 'Select All Flight For Return';
+msg["Select All Flight For Departure"]  = 'Select All Flight For Departure';
+msg["Select Connected Flight For Departure"]  = 'Select Connected Flight For Departure';
+msg["Select Connected Flight For Return"]  = 'Select Connected Flight For Return';
+msg["Select All Connected Flights"]  = 'Select All Connected Flights';
+msg["Adult age must be between 12 and 100. Please Re-Enter Date.."]  = 'Adult age must be between 12 and 100. Please Re-Enter Date..' ;
+msg["Exit Seat Warning For Exit Seats With Allowance For Infant"] = 'Passengers with infants should be allocated a window seat.' 
++'Only one infant per set of seats is allowed!' +"\n"  
++'Emergency exit rows should be assigned to able-bodied adult passengers!';
+msg["Invalid input"] ='Invalid input' ;
+msg["Phone Error"] ='Invalid phone input';
+msg["You are being redirected to Airberlin site"] = 'You are being redirected to Airberlin site';
+msg["Invalid Name Input"] = 'Invalid Name Input';
+msg["Invalid Surname Input"] = 'Invalid Surname Input';
+msg["Invalid Email Input"] = 'Invalid Email Input';
+msg["Invalid Company Name Input"] = 'Invalid Company Name Input';
+msg["Invalid Message Input"] = 'Invalid Message Input';
+msg["Invalid Tax Input"] = 'Invalid Tax Input';
+msg["Invalid Tax Office Input"] = 'Invalid Tax Office Input';
+msg["Invalid City Input"] = 'Invalid City Input';
+msg["Invalid Address Input"] = 'Invalid Address Input';
+msg["Invalid Explanation Input"] = 'Invalid Explanation Input';
+msg["Seat Already Selected"] = 'Seat Already Selected';
+msg["Suggested SF"] = 'Suggested SF';
+msg["Infant age must be between 0 and 2,in the first travel date in pnr. Please Re-Enter Date.."] = 'Infant age must be between 0 and 2,in the first travel date in pnr. Please Re-Enter Date..';
+msg["Child age must be less than 12,in the first travel date in pnr. Please Re-Enter Date.."] = 'Child age must be less than 12,in the first travel date in pnr. Please Re-Enter Date..';
+msg["Child age must be higher than 2,in the last travel date in pnr. Please Re-Enter Date.."] = 'Child age must be higher than 2,in the last travel date in pnr. Please Re-Enter Date..';
+msg["Different currencies cannot be selected at the same time"] = 'Different currencies cannot be selected at the same time';
+msg["Check-In Fee"] = 'Check-In Fee';
+msg["PlusPoint"]=' Plus Members  ##AMOUNT##  Point';
+msg["check return time"]='check return time';
+msg["Incapaciated pax is not permitted for Exit Seats. Please select another seat!"]='Incapaciated pax is not permitted for Exit Seats. Please select another seat!';
+msg["This seat is not suitable for incapaciated pax. Press ok for continue?"]='This seat is not suitable for incapaciated pax. Press ok for continue?';
+msg["Infant / CBBG of this parent has not selected"]='Infant / CBBG of this parent has not selected';
+msg["Seat is not suitable for infants"] = 'Seat is not suitable for passengers with infants';
+msg['DCS Transit baggage weight can not be zero for this number of baggage'] = 'DCS Transit baggage weight can not be zero for this number of baggage';
+msg['DCS Some transit bag mandatory fields are empty...Please check...'] = 'DCS Some transit bag mandatory fields are empty...Please check...';
+msg["The class(es) will be overbooked in case of no availability. Do you confirm?"] = "The class(es) will be overbooked in case of no availability. Do you confirm?";
+msg["January"]='January' ;
+msg["February"]='February' ;
+msg["March"]='March' ;
+msg["April"]='April' ;
+msg["May"]='May' ;
+msg["June"]='June' ;
+msg["July"]='July' ;
+msg["August"]='August' ;
+msg["September"]='September' ;
+msg["October"]='October' ;
+msg["November"]='November' ;
+msg["December"]='December' ;
+msg["Sun"]='Sun' ;
+msg["Mon"]='Mon' ;
+msg["Tue"]='Tue' ;
+msg["Wed"]='Wed' ;
+msg["Thu"]='Thu' ;
+msg["Fri"]='Fri' ;
+msg["Sat"]='Sat' ;
+msg["Total CETAX"]='Total Carbon Emission Tax' ;
+msg["Total YRTAX"]='Total YRTAX' ;
+msg['First Name'] = 'First Name';
+msg['Last Name'] = 'Last Name';
+msg['Ticket Rule'] = 'Ticket Rules';
+msg['taxTypeTW'] = 'tax TWAE-Airport Service Charge ';
+msg['taxTypeOO'] = 'tax SGOO-Passenger Security Service Charge';
+msg['taxTypeSG'] = 'taxTypeSG';
+msg['taxTypeOP'] = 'tax SGOP-Aviation Levy';
+msg['taxTypeSW'] = 'tax JPSW-Passenger Facility Service Charge';
+msg['taxTypeYQ'] = 'tax YQ-Fuel Service Fee/Insurance & Security Surcharge ';
+msg['taxTypeCN'] = 'tax CNAE-Airport Fee';
+msg['taxTypeOI'] = 'tax JPOI-Passenger Security Service Charge';
+msg['taxTypeTS'] = 'tax THTS-International Passenger Service Charge';
+msg['taxTypeBP'] = 'tax KRBP-International PSC, Departure Tax, and Contribution to International Poverty Eradication';
+msg['taxTypeMO'] = 'tax MOAE-Airport Security Tax';
+msg['taxTypeWN'] = 'tax MOWN-Passenger Service Charge';
+msg['Ticket Based Taxes'] = 'Ticket Based Taxes';
+msg['PLEASE ENTER VALID DOCUMENT NUMBER..'] = 'PLEASE ENTER VALID DOCUMENT NUMBER..';
+msg['PLEASE ENTER VALID FF NUMBER..'] = 'PLEASE ENTER VALID PASSENGER FF NUMBER..';
+msg['PLEASE ENTER A VALID DATE..'] = 'PLEASE ENTER A VALID DATE';
+msg['Availability_Bundle_SSR_Selection_Error'] = 'Availability_Bundle_SSR_Selection_Error';
+msg['CHANGE_AUTO_SELECTED_BUNDLE_WARNING'] = 'Change the auto-selected bundle !';
+msg['SELECT_BUNDLE_BASIC'] = 'Light';
+msg['SELECT_BUNDLE_SMART'] = 'Easy';
+msg['SELECT_BUNDLE_PREMIUM'] = 'FLEX';
+msg['SELECT_BUNDLE_PLATINUM'] = 'SELECT_BUNDLE_PLATINUM';
+msg['You have to select all flights in same connection'] = 'You have to select all flights in same connection';
+msg["You must enter at least 3 character for name for like search"] = 'You must enter at least 3 character for name for like search'; 
+msg["You must enter at least 3 character for surname for like search"] = 'You must enter at least 3 character for surname for like search'; 
+msg["No Port Matrix Definition Found"] = 'No Port Matrix Definition Found';
+msg["Infant of this parent has not selected"] = 'Infant of this parent has not selected';
+msg["Invalid input, just enter chars : ##TEXT##"] ='**Invalid input, just enter chars : ##TEXT##' ;
+msg["More Than One Infant in Same Row/Group.. Change Seat!"] = '**More Than One Infant in Same Row/Group.. Change Seat!' ;
+msg["ERROR WHILE BLOCK SEATS"] = '**ERROR WHILE BLOCK SEATS';
+msg["ERROR WHILE RELEASE SEATS"] = '**ERROR WHILE RELEASE SEATS';
+msg["The Flight is not in FF status, ERP data cannot be sent!"] = '**The Flight is not in FF status, ERP data cannot be sent!';
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<script language="Javascript">var isProd=true;</script>
+<script language="Javascript" src="Common/include/PAX.js?updated=23"></script>
+<script type="text/javascript" src="Common/javascripts/hcsvalidation.js"></script>
+<script type="text/javascript" src="Common/javascripts/jquery.js"></script>
+<script type="text/javascript" src="Common/beacon.js" async=""></script>
+
+
+
+
+
+</head>
+
+<body class="new-login-page">
+
+
+
+<!-- #BeginEditable "EditArea" -->
+<!-- Member Rezv Entry SYSTEM=NORMAL variable yuklendi -->
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+    function checkForgetPassword(){
+
+        var password_1=document.forms['form1'].elements["NEW_PASSWORD_1"].value;
+        var password_2=document.forms['form1'].elements["NEW_PASSWORD_2"].value;
+        if(  password_1== ""){
+            alert('**Please enter your password ...');
+            return paxReturn(false);
+        }
+        else if( password_2== ""){
+            alert('Please enter your password...');
+            return paxReturn(false);
+        }
+        else if(password_1!=password_2){
+            alert('**Please enter same password...');
+            return paxReturn(false);
+        }
+        else { 
+            document.forms['form1'].clickedButton.value="btnResetPassword";
+            showObjectSenkronWithSrvlt('resetPassword_info','functionExecuter');
+            alert('**Password has been reset succesfully.');
+            document.forms['form1'].submit();
+        }
+    }
+
+    function check(e){
+        var userName = document.forms['form1'].elements["FORGET_USERNAME"].value;
+
+        if( document.forms['form1'].elements["FORGET_USERNAME"].value == ""){
+            alert('Please enter your User name...');
+            e.preventDefault();
+            return paxReturn(false);
+        }
+        else if(document.forms['form1'].elements["FORGET_EMAIL"].value == ""){
+            alert('**Please enter your mail...');
+            e.preventDefault();
+            return paxReturn(false);
+        }
+        else {
+            document.forms['form1'].clickedButton.value="btnForgetPassword";
+            showObjectSenkronWithSrvlt('resetPassword_info','functionExecuter');
+        }
+
+        if(document.getElementById("resetPassword_info").innerHTML == "INVALID_INFO") {
+            alert("Your name or mail is wrong. Please check and try again");
+            e.preventDefault();
+            return paxReturn(false);
+        }
+        else if (document.getElementById("resetPassword_info").innerHTML == "MAIL_SENT"){
+            alert('**Password reset link has been sent to your e-mail address.');
+            e.preventDefault();
+            return paxReturn(false);
+        } else {
+            e.preventDefault();
+            return paxReturn(false);
+        }
+    }
+
+    function loginControl2FAAuth() {
+        
+    }
+
+    function showPopup() {
+        // Fetch and display the list in the pop-up
+        // Here, you can use AJAX to fetch the list from the server
+        // For simplicity, I'm using a hardcoded list in this example
+        var listItems = ["Item 1", "Item 2", "Item 3", "Item 4"];
+
+        var popupContent = "<ul>";
+        for (var i = 0; i < listItems.length; i++) {
+            popupContent += "<li>" + listItems[i] + "</li>";
+        }
+        popupContent += "</ul>";
+
+        document.getElementById('popup-content').innerHTML = popupContent;
+        document.getElementById('warningpopup').style.display = 'block';
+    }
+
+    function hidePopup() {
+        document.getElementById('warningpopup').style.display = 'none';
+    }
+
+    function sendCodeViaPhone() {
+        document.forms['form1'].clickedButton.value="sendTwoFactorAuthCodeViaPhone";
+        showObjectSenkronWithSrvlt('login_info','functionExecuter');
+        if (document.getElementById("login_info").innerHTML == "TRUE") {
+            openCodeArea();
+        } else {
+            alert("Check your phone number");
+        }
+    }
+
+    function sendCodeViaEmail() {
+        document.forms['form1'].clickedButton.value="sendTwoFactorAuthCodeViaEmail";
+        showObjectSenkronWithSrvlt('login_info','functionExecuter');
+        if (document.getElementById("login_info").innerHTML == "TRUE") {
+            openCodeArea();
+        } else {
+            alert("Check your email");
+        }
+
+    }
+
+    function openCodeArea() {
+        if (document.getElementById("login_info").innerHTML == "TRUE") {
+
+            document.getElementById("codeOptions").style.display = "none";
+            document.getElementById("twoFactAuthArea").style.display = "block";
+        }
+    }
+
+    function getLoginFrame()
+    {
+        document.getElementById("codeOptions").style.display = "none";
+        document.getElementById("twoFactAuthArea").style.display = "none";
+        document.getElementById("login-area").style.display = "block";
+
+    }
+    function showForgetPassword(){
+        document.getElementById('forgetPasssword').style.display= 'block' ;
+    }
+
+
+    var mywindow;
+    function logon() {
+
+        
+
+        
+        if (mywindow!=null) {
+            showObjectWithSrvlt('paxInfo','LoginServlet');
+        }
+        if((mywindow==null)||(mywindow.closed)) {
+            var prm ='toolbar=no,titlebar=no,directories=no,menubar=no,resizable=yes,scrollbars=yes,width=900,height=600,top=0,left=0';
+            mywindow = window.open("",'YEMEN AIRWAYS',prm);
+        }
+        document.forms['form1'].target = 'YEMEN AIRWAYS';
+        try{
+            mywindow.resizeTo(screen.width,screen.height);
+        }catch(e) {}
+        
+
+        if(typeof(JavaBridge) != "undefined" && JavaBridge) {
+
+		   	document.forms['form1'].elements["java-bridge"].value = "true"
+		   }
+           document.forms['form1'].submit();
+           try{
+              mywindow.focus();
+           }catch(e) {}
+            document.forms['form1'].elements["USERNAME"].value="";
+            document.forms['form1'].elements["PASSWORD"].value="";
+           disableButtonContent(this,false);
+        }
+
+    window.addEventListener('keypress', (e) => {
+        if (e.key === "Enter" && disableButtonContent(this,false)) {
+            e.preventDefault();
+            logInControl();
+        }
+    })
+
+    function logInControl(){
+
+            
+                
+                var userName = document.forms['form1'].elements["USERNAME"].value;
+                var passWord = document.forms['form1'].elements["PASSWORD"].value;
+
+                if(userName == ""){
+                    alert('Please enter your User name...');
+                    document.forms['form1'].elements["USERNAME"].focus();
+                    return paxReturn(false);
+                }
+                if(passWord == ""){
+                    alert('Please enter your password...');
+                    document.forms['form1'].elements["PASSWORD"].focus();
+                    return paxReturn(false);
+                }
+
+                document.forms['form1'].clickedButton.value="btnLogInControl";
+                showObjectSenkronWithSrvlt('login_info','functionExecuter');
+
+                document.getElementById("login_info").style.display = "none";
+
+                if(document.getElementById("login_info").innerHTML == "ACTIVE_USER_EXIST"){
+                    if(confirm('**An Active session exist for your user; system kill other session are you sure?')){
+                        logon();
+                    }else{
+                        return paxReturn(false);
+                    }
+                }else if(document.getElementById("login_info").innerHTML == "DIRECTING_TO_PORTAL_SYSTEM"){
+                    alert('**You are portal user, you are redirecting to portal system!')
+                }else if(document.getElementById("login_info").innerHTML == "DIRECTING_TO_PAX_SYSTEM"){
+                    alert('**You are not portal user, you are redirecting to pax system!')
+                }else if(document.getElementById("login_info").innerHTML.indexOf("INCORRECT_PASSWORD") !== -1) {
+                    alert(document.getElementById("login_info").innerText)
+                    return paxReturn(false);
+                }
+
+                document.forms['form1'].elements["USERNAME"].value = userName;
+                document.forms['form1'].elements["PASSWORD"].value = passWord;
+
+                logon();
+
+                
+
+            
+
+
+    }
+    function logInControlSAML(){
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        if (urlParams.get("version") == "3.8A") {
+            sessionStorage.setItem("saml-login", true)
+            sessionStorage.setItem("checkinSystem", urlParams.get("checkinSystem"));
+            sessionStorage.setItem("defPort", urlParams.get("defPort"));
+            sessionStorage.setItem("electronVersion", urlParams.get("version"));
+        }
+        document.forms['form1'].clickedButton.value="btnLogInWithSaml";
+        document.forms['form1'].submit();
+    }
+
+</script>
+
+<form name="form1" method="post" target="" action="MemberRezvEntry.jsp" autocomplete="off">
+    <input class="FormText" type="hidden" name="ORACLE_DEBUG_MODE" id="ORACLE_DEBUG_MODE" value="">
+    <input class="FormText" type="hidden" name="paxInfo" id="paxInfo" value="">
+    <input class="FormText" type="hidden" name="clickedButton" id="clickedButton" value="">
+    <!-- *****************************SessionTimeout control********************* -->
+    
+
+        
+
+    
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW LOGIN PAGE</title>
+
+<style>
+    /* Add your CSS styles for the pop-up here */
+    #warningpopup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    #popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+
+    <div class="new-login-page-header">
+        <div class="logo-area">
+
+        </div>
+        <div class="language-selection-bar" style="text-align: right;margin-right: 20px;">
+            <div>
+                <div class="gap-line">
+                    <select id="languageSelection" class="languageSelection" style="width: 100px" onchange="javascript: changeLanguage();">
+                        
+                        
+                        
+                        <option value="Login.jsp?activeLanguage=EN" selected="selected">
+                        English
+                        </option>
+                        
+                        
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="new-login-page-container">
+        <div id="login-area" class="login-area">
+            
+                <div class="row">
+
+                        <label for="USERNAME">User Name: &nbsp;</label>
+                        <input type="text" id="USERNAME" name="USERNAME">
+
+
+                </div>
+                <div class="row">
+                    <label for="PASSWORD"> Password: &nbsp;</label>
+                    <input type="PASSWORD" id="PASSWORD" name="PASSWORD">
+                </div>
+
+                <div class="button-area">
+                    <div class="login_button btn" onclick="javascript: if (disableButtonContent(this,false)){logInControl()}"> Login </div>
+
+                    
+
+
+                    
+
+                </div>
+                <div id="forgetPasssword" style="display: none" class="forgetPassword">
+                    
+                        <div class="row">
+
+                                <label for="FORGET_USERNAME">User Name: &nbsp;</label>
+                                <input type="text" id="FORGET_USERNAME" name="FORGET_USERNAME">
+
+
+                        </div>
+                        <div class="row">
+                            <label for="FORGET_EMAIL"> MAIL: &nbsp;</label>
+                            <input type="mail" id="FORGET_EMAIL" name="FORGET_EMAIL">
+                        </div>
+
+                        <div class="button-area">
+
+
+                            <button class=" forgetAreaButton btn" onclick="check(event)"> SEND
+                               <!-- Send -->
+                            </button>
+                        </div>
+                    
+                </div>
+        
+        </div>
+        
+    </div></form>
+    <div>
+
+    </div>
+    <div class="new-login-page-footer">
+            <div id="hitit_bottom_panel" width="1250" border="0" cellpadding="0" cellspacing="0">
+                <div align="center">
+                    <div border="0" align="center" cellpadding="0" cellspacing="0">
+                                <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href="javascript:; onClick=openW('','');">
+                                    **Terms and Conditions
+                                </a>
+                                <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href="javascript:; onClick=openW('FOOTER_LINK_INFO','');">
+                                    Information
+                                </a>
+                                <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href="javascript:; onClick=openW('','');">
+                                    **Privacy
+                                </a>
+                                <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none ">
+                                   Copyright
+                                </a>
+                    </div>
+                </div>
+                <div border="0" align="center" cellpadding="0" cellspacing="0">
+                            <div height="37" valign="middle" align="center">
+                                <a style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #FFFFFF; text-decoration: none " href="javascript:; onClick=openW('RulesAndProcedure.xhtml','');">
+                                    Rules &amp; Procedure
+                                </a>
+                        </div>
+                    <div id="rules" style="display:none;" title="Rules And Procedures">
+                        <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+                            <span id="ui-id-1" class="ui-dialog-title"></span>
+                            <a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
+                                <span class="ui-icon ui-icon-closethick">close</span>
+                            </a>
+                        </div>
+                        <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" style="background: whitesmoke; width: 750px;" scrollleft="0">
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8fd5e8f06c9ef9eb',t:'MTczNjEwNTcxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+<div id="login_info" style="hidden">
+<div id="resetPassword_info" style="hidden">
+
+<!-- #EndTemplate -->
+</div></div></body></html><!-- #EndEditable -->

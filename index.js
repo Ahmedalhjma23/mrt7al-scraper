@@ -34,6 +34,11 @@ app.get('/api/flights', async (req, res) => {
   }
 });
 
+// نقطة النهاية الرئيسية (اختياري) - إذا كنت ترغب في صفحة ترحيبية
+app.get('/', (req, res) => {
+  res.send('Welcome to the API! Use /api/flights to get flight data.');
+});
+
 // بدء الخادم
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

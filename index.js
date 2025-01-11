@@ -1,14 +1,40 @@
+require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
+
+// إعداد تطبيق Express
 const app = express();
-const flightsRouter = require('./flights');
-const sponsorsRouter = require('./sponsors');
+const PORT = process.env.PORT || 3000;
 
-// استخدم الراوتر الأول على مسار محدد
-app.use('/api', flightsRouter);
-// استخدم الراوتر الثاني
-app.use('/api', sponsorsRouter);
+// الاتصال بقاعدة بيانات MongoDB عبر الرابط الذي قدمته
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch((err) => console.log('MongoDB connection error:', err));
 
-const PORT = 3000;
+// نموذج Mongoose للبيانات (رحلات الطيران)
+const Flight = mongoose.model('Flight', new mongoose.Schema({
+  flightNumber: String,
+  airline: String,
+  departure: String,
+  arrival: String,
+  date: Date,
+  price: Number
+}));
+
+// نقطة النهاية API لعرض جميع الرحلات
+app.get('/api/flights', async (req, res) => {
+  try {
+    const flights = await Flight.find();  // جلب جميع الرحلات من قاعدة البيانات
+    res.json(flights);  // إرسال البيانات بتنسيق JSON
+  } catch (err) {
+    res.status(500).send('Error retrieving flights');
+  }
+});
+
+// بدء الخادم
 app.listen(PORT, () => {
-    console.log(`الخادم يعمل على المنفذ ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

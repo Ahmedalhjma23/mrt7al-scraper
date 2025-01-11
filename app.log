@@ -1,0 +1,7 @@
+2025-01-11T18:08:01.381Z [INFO]: تم الاتصال بقاعدة بيانات MongoDB بنجاح.
+2025-01-11T18:08:01.392Z [INFO]: بدء تشغيل Puppeteer...
+2025-01-11T18:08:01.404Z [ERROR]: حدث خطأ أثناء استخراج البيانات: Browser was not found at the configured executablePath (/usr/bin/chromium-browser)
+2025-01-11T18:08:01.405Z [INFO]: تم جلب البيانات الأولية.
+2025-01-11T18:08:01.409Z [INFO]: الخادم يعمل على http://localhost:4000
+2025-01-11T18:08:01.410Z [INFO]: استخدم http://localhost:4000/api/flights للحصول على بيانات الرحلات.
+2025-01-11T18:08:01.410Z [INFO]: استخدم http://localhost:4000/api/buses للحصول على بيانات الحافلات.

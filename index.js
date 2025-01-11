@@ -238,8 +238,9 @@ const fetchData = async () => {
         '--single-process',
         '--disable-gpu'
       ],
-      userDataDir: '/tmp/.cache-puppeteer', // تحديد مسار كاش قابل للكتابة
-      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined, // تحديد مسار Chromium إذا لزم الأمر
+      // إزالة 'executablePath' للسماح لـ Puppeteer باستخدام Chromium الافتراضي
+      // إذا كنت تعرف المسار الصحيح لـ Chromium على نظامك، يمكنك إضافته هنا
+      // executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
     });
     logger.info('تم تشغيل Puppeteer بنجاح.');
     const page = await browser.newPage();

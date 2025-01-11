@@ -1,3 +1,7 @@
+/***************************************
+ * ملف: index.js
+ ***************************************/
+
 const puppeteer = require('puppeteer');
 const express = require('express');
 const cron = require('node-cron');
@@ -35,6 +39,20 @@ const flightSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 const Flight = mongoose.model('Flight', flightSchema);
+
+// تعريف نموذج بيانات الحافلات باستخدام Mongoose
+const busSchema = new mongoose.Schema({
+  route: { type: String, required: true },
+  busNumber: { type: String, required: true },
+  status: { type: String, required: true },
+  departureTime: { type: String, required: true },
+  departureDate: { type: String, required: true },
+  arrivalTime: { type: String, required: true },
+  arrivalDate: { type: String, required: true },
+  fetchedAt: { type: Date, default: Date.now }
+}, { timestamps: true });
+
+const Bus = mongoose.model('Bus', busSchema);
 
 /** 
  * كائن يحتوي على الروابط والطلبات التي سيتم تنفيذها
@@ -307,10 +325,8 @@ const fetchData = async () => {
     for (const result of allResults) {
       const { name, request, data } = result;
       
-      // مثال على تخزين البيانات، يمكن تعديلها حسب هيكل البيانات الفعلي
       try {
-        // هنا يمكنك تعديل النموذج حسب البيانات التي تم جلبها
-        // على سبيل المثال، إذا كانت البيانات تحتوي على مصفوفة من الرحلات:
+        // مثال على تخزين بيانات الرحلات
         if (data.flights && Array.isArray(data.flights)) {
           for (const flight of data.flights) {
             // التحقق من عدم وجود الرحلة مسبقًا لتجنب التكرار
@@ -328,9 +344,28 @@ const fetchData = async () => {
               logger.info(`الرحلة موجودة بالفعل: ${flight.flightNumber}`);
             }
           }
-        } else {
-          logger.warn(`هيكل البيانات غير متوقع للطلب: ${name}`);
         }
+
+        // مثال على تخزين بيانات الحافلات
+        if (data.buses && Array.isArray(data.buses)) {
+          for (const bus of data.buses) {
+            // التحقق من عدم وجود الحافلة مسبقًا لتجنب التكرار
+            const exists = await Bus.findOne({
+              busNumber: bus.busNumber,
+              departureDate: bus.departureDate,
+              departureTime: bus.departureTime
+            });
+
+            if (!exists) {
+              const newBus = new Bus(bus);
+              await newBus.save();
+              logger.info(`تمت إضافة حافلة جديدة: ${bus.busNumber}`);
+            } else {
+              logger.info(`الحافلة موجودة بالفعل: ${bus.busNumber}`);
+            }
+          }
+        }
+
       } catch (dbError) {
         logger.error(`خطأ عند حفظ البيانات للطلب ${name}: ${dbError.message}`);
       }
@@ -404,9 +439,23 @@ app.get('/api/flights', async (req, res) => {
   }
 });
 
+// نقطة النهاية API لعرض جميع الحافلات كـ JSON من قاعدة البيانات
+app.get('/api/buses', async (req, res) => {
+  try {
+    const buses = await Bus.find().sort({ fetchedAt: -1 });
+    if (buses.length === 0) {
+      return res.status(503).json({ message: 'البيانات قيد التحميل. الرجاء المحاولة لاحقًا.' });
+    }
+    res.json(buses);
+  } catch (error) {
+    logger.error(`خطأ أثناء جلب البيانات من قاعدة البيانات: ${error.message}`);
+    res.status(500).json({ message: 'حدث خطأ أثناء جلب البيانات.', error: error.message });
+  }
+});
+
 // نقطة النهاية الرئيسية - صفحة ترحيبية
 app.get('/', (req, res) => {
-  res.send('مرحبًا بك في الـ API! استخدم /api/flights للحصول على بيانات الرحلات.');
+  res.send('مرحبًا بك في الـ API! استخدم /api/flights و /api/buses للحصول على بيانات الرحلات والحافلات.');
 });
 
 /**
@@ -422,7 +471,9 @@ mongoose.connect(process.env.MONGODB_URI, {
     // بدء تشغيل الخادم بعد الاتصال بقاعدة البيانات
     const PORT = process.env.PORT || 4000;
     app.listen(PORT, () => {
-      logger.info(`الخادم يعمل على http://localhost:${PORT}/api/flights`);
+      logger.info(`الخادم يعمل على http://localhost:${PORT}`);
+      logger.info(`استخدم http://localhost:${PORT}/api/flights للحصول على بيانات الرحلات.`);
+      logger.info(`استخدم http://localhost:${PORT}/api/buses للحصول على بيانات الحافلات.`);
     });
 
     // استخراج البيانات أول مرة عند بدء السيرفر
